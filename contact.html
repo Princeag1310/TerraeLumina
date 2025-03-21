@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TerraeLumina | Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/terraelumina-logo.png" alt="TerraeLumina Logo" class="logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="offerings.html">Offerings</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section animate__animated animate__fadeIn">
+    <h1 class="section-title">Get in Touch</h1>
+    <p>Whether you're a chef, sponsor, or passionate food lover, we’d love to hear from you.</p>
+    <div class="contact-container">
+      <form id="contactForm" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required />
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <h2>Our Details</h2>
+        <p><strong>Email:</strong> TerraeLumina@gmail.com</p>
+        <p><strong>Instagram:</strong> @TerraeLumina</p>
+        <p><strong>Facebook:</strong> TerraeLuminaOfficial</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TerraeLumina. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // JavaScript to handle form submission using mailto:
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Get form values
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      
+      // Construct the email subject and body
+      const subject = encodeURIComponent("Message from TerraeLumina Contact Form");
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Email: ${email}\n\n` +
+        `Message:\n${message}`
+      );
+      
+      // Create the mailto link with your email address
+      const mailtoLink = `mailto:TerraeLumina@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Redirect to the mailto link
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>

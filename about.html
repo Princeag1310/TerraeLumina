@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TerraeLumina | About Us</title>
+  <!-- Animate.css for smooth animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Google Fonts: Montserrat -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Additional styles for About Us Page */
+    .team-section {
+      padding: 4rem 2rem;
+      background: var(--bg-color);
+      text-align: center;
+    }
+    .team-section h2 {
+      font-size: 2.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color-start);
+    }
+    .team-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .team-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 1.5rem;
+      max-width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .team-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .team-card h3 {
+      font-size: 1.5rem;
+      color: var(--accent-color-start);
+      margin-bottom: 0.25rem;
+    }
+    .team-card p {
+      font-size: 1rem;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+    }
+    .position {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/terraelumina-logo.png" alt="TerraeLumina Logo" class="logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="offerings.html">Offerings</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- About Us Content -->
+  <section class="about-section animate__animated animate__fadeIn">
+    <h1 class="section-title">About TerraeLumina</h1>
+    <div class="about-content">
+      <p>
+        TerraeLumina is more than just a restaurant—it is an exclusive premium dining experience that transforms nature’s finest bounty into culinary art. Our name, combining “Terrae” (earth) and “Lumina” (light), reflects our dedication to sourcing exceptional ingredients and crafting an ambiance that is both warm and inspiring.
+      </p>
+      <p>
+        We create an atmosphere where every detail—from the gourmet dishes to the interactive open mic sessions and networking opportunities—is designed to delight and engage our guests. Our goal is to provide a dining journey that is not only exquisite but also deeply memorable.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Team Section -->
+  <section class="team-section animate__animated animate__fadeInUp">
+    <h2>Meet Our Founders</h2>
+    <!-- First Row: 3 Founders -->
+    <div class="team-row">
+      <!-- CEO -->
+      <div class="team-card">
+        <img src="images/founder1.jpeg" alt="Prince Agrawal">
+        <h3>Prince Agrawal</h3>
+        <p class="position">CEO</p>
+        <p>Visionary leader driving our strategic direction to ensure every detail reflects premium quality.</p>
+      </div>
+      <!-- CTO -->
+      <div class="team-card">
+        <img src="images/founder2.jpg" alt="Dhruv Verma">
+        <h3>Dhruv Verma</h3>
+        <p class="position">CTO</p>
+        <p>Oversees our technology and digital innovations for a seamless guest experience.</p>
+      </div>
+      <!-- CXO & COO (Moved to Position 3) -->
+      <div class="team-card">
+        <img src="images/founder3.jpg" alt="Khushi Mangla">
+        <h3>Khushi Mangla</h3>
+        <p class="position">CXO & COO</p>
+        <p>Ensures flawless operations and an exceptional, welcoming atmosphere for every guest.</p>
+      </div>
+    </div>
+    <!-- Second Row: 2 Founders -->
+    <div class="team-row">
+      <!-- CFO -->
+      <div class="team-card">
+        <img src="images/founder4.jpg" alt="Bhudev Bhanpuriya">
+        <h3>Bhudev Bhanpuriya</h3>
+        <p class="position">CFO</p>
+        <p>Manages financial planning and ensures sustainable growth through rigorous budgeting.</p>
+      </div>
+      <!-- CMO -->
+      <div class="team-card">
+        <img src="images/founder5.jpg" alt="Subhramit Bera">
+        <h3>Subhramit <br>Bera</h3>
+        <p class="position">CMO</p>
+        <p>Drives our marketing strategies and brand engagement to attract our elite clientele.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TerraeLumina. All rights reserved.</p>
+  </footer>
+</body>
+</html>

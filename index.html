@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TerraeLumina | Home</title>
+  <!-- Animate.css for smooth animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Google Fonts: Montserrat -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #fffaf2, #fef8e7);
+      color: #2c3e50;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    :root {
+      --bg-color: #fffaf2;
+      --text-color: #2c3e50;
+      --accent-gradient: linear-gradient(45deg, #ff8c00, #ffd700);
+      --secondary-color: #e67e22;
+      --card-bg: #ffffff;
+      --border-color: #f0e6d6;
+    }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-color);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--secondary-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .logo {
+      height: 60px;
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.15));
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ff8c00;
+      border-bottom: 2px solid #ff8c00;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 80vh; /* Reduced height */
+      background: var(--accent-gradient), url('../images/event1.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+      animation: fadeIn 1.5s ease;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.8);
+      mix-blend-mode: multiply;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    .hero-logo {
+      width: 150px;
+      margin: 0 auto 0.5rem auto; /* Centered and slightly shifted up */
+      display: block;
+    }
+    .hero-brand {
+      font-size: 2.5rem;  /* Bigger than the tagline */
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+    .hero-tagline {
+      font-size: 2rem;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+    .hero-cta {
+      font-size: 1.2rem;
+      padding: 0.75rem 2rem;
+      background: var(--accent-gradient);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(255,140,0,0.5);
+    }
+    .additional-info {
+      font-size: 1.1rem;
+      color: #fef8e7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    /* Extra Sections */
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #ff8c00;
+    }
+    .section p {
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 1.5rem;
+      max-width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .highlight-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .highlight-card h3 {
+      font-size: 1.5rem;
+      color: #ff8c00;
+      margin-bottom: 0.5rem;
+    }
+    .highlight-card p {
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+    /* Footer */
+    footer {
+      background: var(--bg-color);
+      color: #999999;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+    /* Animations */
+    @keyframes slideInDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/terraelumina-logo.png" alt="TerraeLumina Logo" class="logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="offerings.html">Offerings</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero animate__animated animate__fadeIn">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <!-- Centered logo at the top -->
+      <img src="images/logo1.png" alt="TerraeLumina Logo" class="hero-logo">
+      <!-- Brand text just below the logo, larger than the tagline -->
+      <div class="hero-brand">TerraeLumina</div>
+      <div class="hero-tagline">
+        Discover Culinary Brilliance
+      </div>
+      <a href="events.html" class="hero-cta">Explore Our Events</a>
+      <div class="additional-info">
+        <p>
+          Welcome to TerraeLumina—where the finest ingredients meet culinary artistry. Immerse yourself in an exclusive experience that enchants, inspires, and creates unforgettable memories.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="section animate__animated animate__fadeInUp">
+    <h2>Our Story</h2>
+    <p>
+      TerraeLumina was born from a passion for culinary excellence and a deep connection to nature. Our name reflects our core philosophy: combining the richness of the earth with the brilliance of light to create a dining experience that is both luxurious and soulful.
+    </p>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section animate__animated animate__fadeInUp">
+    <h2>Why Choose TerraeLumina?</h2>
+    <p>
+      We believe that dining is an art. Our commitment to premium quality, elegant ambiance, and interactive experiences sets us apart. Every detail is meticulously crafted to leave a lasting impression.
+    </p>
+  </section>
+
+  <!-- Featured Highlights Section -->
+  <section class="section animate__animated animate__fadeInUp">
+    <h2>Featured Highlights</h2>
+    <div class="highlights">
+      <div class="highlight-card">
+        <h3>Gourmet Excellence</h3>
+        <p>Every dish is a masterpiece created by top culinary experts, ensuring an unrivaled taste experience.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Interactive Moments</h3>
+        <p>Experience engaging open mic sessions that foster community and creativity.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Exquisite Ambiance</h3>
+        <p>Our spaces are designed with elegance and sophistication to create an unforgettable atmosphere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TerraeLumina. All rights reserved.</p>
+  </footer>
+</body>
+</html>

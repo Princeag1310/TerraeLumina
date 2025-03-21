@@ -1,0 +1,60 @@
+[
+    {
+      "id": "1",
+      "name": "Chef’s Special Night",
+      "date": "25th March 2025",
+      "time": "7:00 PM - 11:00 PM",
+      "venue": "The Culinary Loft, Gwalior",
+      "chef": "Chef Aria",
+      "image": "images/event1.png",
+      "description": "Join Chef Aria for an unforgettable gourmet dinner where the finest ingredients are transformed into artful dishes. This event combines culinary mastery with interactive segments to create a dining experience that excites every sense.",
+      "menuHighlights": [
+        "Roasted Beetroot Salad with Goat Cheese Crumble",
+        "Pan-Seared Salmon with Mango Salsa",
+        "Dark Chocolate Lava Cake with Fresh Berries"
+      ],
+      "additionalDetails": "Enjoy engaging open mic sessions and meet fellow connoisseurs in a vibrant, exclusive setting. Every element is designed to delight and inspire.",
+      "dressCode": "Smart Casual",
+      "reservations": "Limited seating available. Reserve your table now to experience an evening of culinary brilliance!",
+      "registerLink": "https://forms.gle/3gbXNCt4JVdCn3j4A"
+    },
+    {
+      "id": "2",
+      "name": "Street Food Fusion",
+      "date": "10th April 2025",
+      "time": "6:00 PM - 10:00 PM",
+      "venue": "Urban Eatery, Gwalior",
+      "chef": "Chef Kunal",
+      "image": "images/event2.png",
+      "description": "Experience a reimagined world of street food where traditional favorites are elevated into gourmet creations. Savor innovative dishes and artisanal cocktails in a dynamic urban setting.",
+      "menuHighlights": [
+        "Crispy Tacos with Avocado Crema",
+        "Spicy Fusion Dumplings",
+        "Mango Lassi with a Twist"
+      ],
+      "additionalDetails": "The event features live music and open mic performances, creating an energetic atmosphere for networking and creative expression.",
+      "dressCode": "Casual Chic",
+      "reservations": "Book early to secure your spot at this vibrant celebration of flavors!",
+      "registerLink": "https://forms.gle/S5adzFRidrHmhwUi9"
+    },
+    {
+      "id": "3",
+      "name": "Vegan Delight",
+      "date": "1st May 2025",
+      "time": "7:30 PM - 10:30 PM",
+      "venue": "Green Haven, Gwalior",
+      "chef": "Chef Mira",
+      "image": "images/event3.png",
+      "description": "Discover the magic of plant-based cuisine with a curated vegan feast that emphasizes creativity and health. Each dish is crafted to be as visually stunning as it is delicious.",
+      "menuHighlights": [
+        "Quinoa & Kale Salad with Citrus Vinaigrette",
+        "Stuffed Portobello Mushrooms",
+        "Vegan Chocolate Mousse with Berry Compote"
+      ],
+      "additionalDetails": "This event includes interactive discussions on wellness and sustainability, offering a unique, mindful dining experience.",
+      "dressCode": "Smart Casual",
+      "reservations": "Reserve your seat for an innovative and inspiring vegan culinary journey!",
+      "registerLink": "https://forms.gle/qZ6uLXF2XhBf4P9bA"
+    }
+  ]
+  
